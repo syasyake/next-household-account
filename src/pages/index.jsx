@@ -1,6 +1,7 @@
 import Card from '../components/parts/Card'
 import Modal from '../components/parts/Modal'
-import Selectbox from '../components/elements/Selectbox'
+import AddExpensesForm from '../components/parts/Form/AddExpensesForm'
+import SelectBox from '../components/elements/SelectBox'
 
 export default function Home() {
   return (
@@ -9,32 +10,73 @@ export default function Home() {
           <p className="text-3xl">各月収支</p>
         </div>
         <div className="flex justify-between mb-4">
-          <Selectbox></Selectbox>
-          <Modal></Modal>
+          <div>
+            <SelectBox></SelectBox>
+          </div>
+          <div>
+            <Modal
+              openButtonText="+ 収支を追加"
+              title="追加する収支を入力"
+              buttonText="+ 追加する"
+            >
+              <AddExpensesForm></AddExpensesForm>
+            </Modal>
+          </div>
         </div>
 
-        <div className="box-border h-96 p-4 border-4 mb-4">
+        <div className="box-border h-96 p-4 border-4 bg-base-100 mb-4">
           グラフ
         </div>
 
         <div className="grid gap-4 grid-cols-2 mb-4">
-          <Card></Card>
-          <Card></Card>
+          <Card title="7月の収入合計" bgColor="bg-info">
+            <p className="text-right text-2xl">300000円</p>
+          </Card>
+          <Card title="7月の支出合計" bgColor="bg-secondary">
+            <p className="text-right text-2xl">70000円</p>
+          </Card>
         </div>
+        <div className="text-xl mb-2">並び替え & 絞り込み</div>
         <div className="grid gap-4 grid-cols-3 mb-4">
-          <Selectbox></Selectbox>
-          <Selectbox></Selectbox>
-          <Selectbox></Selectbox>
+          <SelectBox></SelectBox>
+          <SelectBox></SelectBox>
+          <SelectBox></SelectBox>
         </div>
         <div className="mb-4">
           <div className="mb-2">
-            <Card></Card>
+            <Card title="2022/07/15">
+              <div className="mb-2">
+                <Card bgColor="bg-secondary">
+                  <div className="flex justify-between text-2xl mb-2">
+                    <span>食費</span>
+                    <span>3000円</span>
+                  </div>
+                  <div>メモ: テスト1</div>
+                </Card>
+              </div>
+              <div className="mb-2">
+                <Card bgColor="bg-info">
+                  <div className="flex justify-between text-2xl mb-2">
+                    <span>給料</span>
+                    <span>300000円</span>
+                  </div>
+                  <div>メモ: テスト2</div>
+                </Card>
+              </div>
+            </Card>
           </div>
           <div className="mb-2">
-            <Card></Card>
-          </div>
-          <div className="mb-2">
-            <Card></Card>
+            <Card title="2022/07/16">
+              <div className="mb-2">
+                <Card bgColor="bg-secondary">
+                  <div className="flex justify-between text-2xl mb-2">
+                    <span>娯楽費</span>
+                    <span>5000円</span>
+                  </div>
+                  <div>メモ: テスト3</div>
+                </Card>
+              </div>
+            </Card>
           </div>
         </div>
       </div>

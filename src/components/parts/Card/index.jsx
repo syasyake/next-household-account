@@ -1,9 +1,9 @@
-export default function Card() {
+export default function Card({children, title, bgColor}) {
   return (
-    <div className="card bg-base-100 shadow-xl">
-      <div className="card-body">
-        <h2 className="card-title">Card title!</h2>
-        <p>Card Content</p>
+    <div className={"card bg-base-100 shadow-xl " + bgColor}>
+      <div className="card-body py-4">
+        <h2 className="card-title">{title}</h2>
+        <div>{children}</div>
       </div>
     </div>
   )

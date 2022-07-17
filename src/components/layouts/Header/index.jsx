@@ -3,7 +3,7 @@ export default function Header({ children }) {
     <div className="drawer">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" /> 
       <div className="drawer-content flex flex-col">
-        <div className="navbar w-full bg-base-300">
+        <div className="navbar w-full bg-primary">
           <div className="flex-none">
             <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current">
@@ -11,7 +11,7 @@ export default function Header({ children }) {
               </svg>
             </label>
           </div>
-          <div className="flex-1 px-2 mx-2 text-2xl">Navbar Title</div>
+          <div className="flex-1 px-2 mx-2 text-2xl">家計簿アプリ</div>
         </div>
         {children}
       </div>
