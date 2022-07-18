@@ -1,4 +1,4 @@
-export default function Selectbox({children}) {
+export default function Selectbox({children, options}) {
   return (
     <>
       {children &&
@@ -7,11 +7,9 @@ export default function Selectbox({children}) {
         </label>
       }
       <select className="select input-bordered max-w-xs">
-        <option>option1</option>
-        <option>option2</option>
-        <option>option3</option>
-        <option>option4</option>
-        <option>option5</option>
+        {options.map(option => {
+         return <option key={option.id}>{option.name}</option>
+        })}
       </select>
     </>
   )

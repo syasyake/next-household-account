@@ -2,6 +2,7 @@ import Card from '../components/parts/Card'
 import Modal from '../components/parts/Modal'
 import AddExpensesForm from '../components/parts/Form/AddExpensesForm'
 import SelectBox from '../components/elements/SelectBox'
+import {TestYearMonth, SortType} from '../common/constants'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         </div>
         <div className="flex justify-between mb-4">
           <div>
-            <SelectBox></SelectBox>
+            <SelectBox options={TestYearMonth}></SelectBox>
           </div>
           <div>
             <Modal
@@ -36,11 +37,8 @@ export default function Home() {
             <p className="text-right text-2xl">70000円</p>
           </Card>
         </div>
-        <div className="text-xl mb-2">並び替え & 絞り込み</div>
-        <div className="grid gap-4 grid-cols-3 mb-4">
-          <SelectBox></SelectBox>
-          <SelectBox></SelectBox>
-          <SelectBox></SelectBox>
+        <div className="mb-4">
+          <SelectBox options={SortType}>並び替え</SelectBox>
         </div>
         <div className="mb-4">
           <div className="mb-2">
