@@ -61,11 +61,11 @@ const InputIncomeCategory = [
 const TestYearMonth = [
   {
     id: 1,
-    name: '2022年7月'
+    name: '2022/07'
   },
   {
     id: 2,
-    name: '2022年8月'
+    name: '2022/08'
   }
 ]
 
