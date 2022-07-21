@@ -17,6 +17,10 @@ const InputBudget = [
   {
     id: 2,
     name: '支出'
+  },
+  {
+    id: 3,
+    name: '貯金'
   }
 ];
 
@@ -58,6 +62,17 @@ const InputIncomeCategory = [
   }
 ]
 
+const InputSavingCategory = [
+  {
+    id: 1,
+    name: '通常貯金'
+  },
+  {
+    id: 2,
+    name: '定期貯金'
+  }
+]
+
 const TestYearMonth = [
   {
     id: 1,
@@ -74,5 +89,6 @@ export {
   InputBudget,
   InputExpenseCategory,
   InputIncomeCategory,
+  InputSavingCategory,
   TestYearMonth
 };
