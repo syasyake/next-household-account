@@ -26,6 +26,9 @@ export default function AddExpensesForm() {
       <div className="mb-2">
         <TextInput>メモ</TextInput>
       </div>
+      <div className="modal-action">
+        <label htmlFor="my-modal" className="btn">{buttonText}</label>
+      </div>
     </div>
   )
 }

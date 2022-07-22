@@ -17,7 +17,7 @@ const fildAll = (id) =>
     .toArray()
 
 // 年月全件取得
-const fildYearMonth = (id) =>
+const fildYearmonth = (id) =>
   table
     .where('trackId')
     .equals(trackId)
