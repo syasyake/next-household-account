@@ -1,6 +1,6 @@
 import TextInput from '../../../../elements/TextInput'
 import DateInput from '../../../../elements/DateInput'
-import SelectBox from '../../../../elements/SelectBox'
+import SelectBoxInput from '../../../../elements/SelectBoxInput'
 import {
   InputBudget,
   InputExpenseCategory,
@@ -22,10 +22,10 @@ export default function AddExpensesForm() {
             <DateInput name="date">日付</DateInput>
           </div>
           <div className="mb-2">
-            <SelectBox options={InputBudget} name="budget">収入 or 支出</SelectBox>
+            <SelectBoxInput options={InputBudget} name="budget">収入 or 支出</SelectBoxInput>
           </div>
           <div className="mb-2">
-            <SelectBox options={InputExpenseCategory} name="category">カテゴリ</SelectBox>
+            <SelectBoxInput options={InputExpenseCategory} name="category">カテゴリ</SelectBoxInput>
           </div>
           <div className="mb-2">
             <TextInput name="amount">金額</TextInput>
