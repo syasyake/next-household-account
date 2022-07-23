@@ -1,4 +1,8 @@
-export default function Selectbox({children, options}) {
+import { useFormContext } from "react-hook-form"
+
+export default function Selectbox({children, options, name}) {
+  const { register } = useFormContext()
+
   return (
     <>
       {children &&
@@ -6,7 +10,9 @@ export default function Selectbox({children, options}) {
           <span className="label-text">{children}</span>
         </label>
       }
-      <select className="select input-bordered max-w-xs">
+      <select
+        className="select input-bordered max-w-xs"
+      >
         {options.map(option => {
          return <option key={option.id}>{option.name}</option>
         })}

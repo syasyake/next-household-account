@@ -1,6 +1,6 @@
 import Card from '../components/parts/Card'
 import Modal from '../components/parts/Modal'
-import AddExpensesForm from '../components/parts/Form/AddExpensesForm'
+import AddExpensesForm from '../components/parts/Form/AddExpenses'
 import SelectBox from '../components/elements/SelectBox'
 import {TestYearMonth, SortType} from '../common/constants'
 
@@ -17,8 +17,7 @@ export default function Home() {
           <div>
             <Modal
               openButtonText="+ 収支を追加"
-              title="追加する収支を入力"
-              buttonText="+ 追加する"
+              title="収支を追加"
             >
               <AddExpensesForm></AddExpensesForm>
             </Modal>
