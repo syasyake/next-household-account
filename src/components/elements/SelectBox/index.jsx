@@ -12,6 +12,7 @@ export default function Selectbox({children, options, name}) {
       }
       <select
         className="select input-bordered max-w-xs"
+        {...register(name)}
       >
         {options.map(option => {
          return <option key={option.id}>{option.name}</option>
